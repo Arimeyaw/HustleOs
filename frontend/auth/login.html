@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login | HustleOS</title>
+    <link rel="stylesheet" href="./auth.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="auth__container">
+      <div class="auth__form">
+        <h2>Welcome back</h2>
+        <p>Login to continue hustling</p>
+
+        <button class="google__btn">
+          <i class="fa-brands fa-google"></i>
+          Continue with Google
+        </button>
+
+        <div class="auth__divider">or login with email</div>
+
+        <div class="auth__group">
+          <label>Email</label>
+          <input type="email" placeholder="you@email.com" />
+        </div>
+
+        <div class="auth__group">
+          <label>Password</label>
+          <input type="password" />
+        </div>
+
+        <button class="auth__btn" onclick="login()">Login</button>
+
+        <div class="auth__footer">
+          Don’t have an account?
+          <a href="./register.html">Create one</a>
+        </div>
+      </div>
+
+      <div class="auth__info">
+        <h3>Build your hustle</h3>
+        <ul>
+          <li><i class="fa-solid fa-calendar-check"></i> Manage bookings</li>
+          <li><i class="fa-solid fa-wallet"></i> Get paid digitally</li>
+          <li><i class="fa-solid fa-star"></i> Build trust with reviews</li>
+          <li><i class="fa-solid fa-rocket"></i> Unlock more opportunities</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      function login() {
+        const email = document
+          .querySelector('input[type="email"]')
+          .value.trim();
+        const password = document.querySelector('input[type="password"]').value;
+
+        if (!email || !password) {
+          alert("Email and password are required");
+          return;
+        }
+
+        const user = JSON.parse(localStorage.getItem("hustleUser"));
+
+        if (!user) {
+          alert("No account found. Please register.");
+          return;
+        }
+
+        if (email !== user.email || password !== user.password) {
+          alert("Invalid email or password");
+          return;
+        }
+
+        if (!user.role) {
+          window.location.href = "./role-select.html";
+          return;
+        }
+
+        if (user.role === "client") {
+          window.location.href = "../Dashboards/client.html";
+        } else {
+          window.location.href = "../Dashboards/worker.html";
+        }
+      }
+    </script>
+  </body>
+</html>

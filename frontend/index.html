@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/frontend/style.css" />
+    <title>Hustle OS | Where Skills Meet Opportunity</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">HustleOS</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <span><i class="ri-menu-line"></i></span>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+      <div class="nav__btns">
+        <button
+          class="btn sign__up"
+          onclick="location.href='/frontend/auth/login.html'"
+        >
+          Log in
+        </button>
+
+        <button
+          class="btn sign__in"
+          onclick="location.href='/frontend/auth/register.html'"
+        >
+          Get Started
+        </button>
+      </div>
+    </nav>
+
+    <header class="header__container">
+      <div class="header__image">
+        <div class="header__image__card header__image__card-1">
+          <span><i class="ri-hammer-line"></i></span>
+          Artisans
+        </div>
+        <div class="header__image__card header__image__card-2">
+          <span><i class="ri-electrical-line"></i></span>
+          Electricians
+        </div>
+        <div class="header__image__card header__image__card-3">
+          <span><i class="ri-paint-line"></i></span>
+          Painters
+        </div>
+        <div class="header__image__card header__image__card-4">
+          <span><i class="ri-briefcase-line"></i></span>
+          Professionals
+        </div>
+        <img src="/frontend/assets/logo.png" alt="Hustle OS Header Image" />
+      </div>
+
+      <div class="header__content">
+        <h1>Hustle <span>OS</span><br />Your Skills, Your Opportunities</h1>
+        <p>
+          Connect with clients, grow your skills, and turn your talent into
+          real-world opportunities. Hustle OS empowers artisans, freelancers,
+          and professionals to thrive in the digital age.
+        </p>
+
+        <form action="/">
+          <div class="input__row">
+            <div class="input__group">
+              <h5>Service Needed</h5>
+              <div>
+                <span><i class="ri-tools-line"></i></span>
+                <input type="text" placeholder="e.g., Plumbing, Painting" />
+              </div>
+            </div>
+            <div class="input__group">
+              <h5>Location</h5>
+              <div>
+                <span><i class="ri-map-pin-line"></i></span>
+                <input type="text" placeholder="e.g., Accra, Ghana" />
+              </div>
+            </div>
+          </div>
+          <button type="submit">Search</button>
+        </form>
+
+        <div class="bar">Copyright © 2025 Hustle OS. All rights reserved.</div>
+      </div>
+    </header>
+    <!-- FEATURES -->
+    <section class="features" id="features">
+      <h2 class="section__title">Why Hustle OS?</h2>
+
+      <div class="features__grid">
+        <div class="feature__card">
+          <i class="ri-shield-check-line"></i>
+          <h3>Verified Professionals</h3>
+          <p>Trust and safety through identity and skill verification.</p>
+        </div>
+
+        <div class="feature__card">
+          <i class="ri-briefcase-line"></i>
+          <h3>Real Jobs</h3>
+          <p>Connect with clients who need your exact skill.</p>
+        </div>
+
+        <div class="feature__card">
+          <i class="ri-smartphone-line"></i>
+          <h3>Mobile Friendly</h3>
+          <p>Work and manage jobs easily on your phone.</p>
+        </div>
+
+        <div class="feature__card">
+          <i class="ri-line-chart-line"></i>
+          <h3>Grow Faster</h3>
+          <p>Ratings, reviews, and exposure help you scale.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="section--2">
+      <div class="section__title">
+        <h2 class="section__description">How It Works</h2>
+        <h3 class="section__header">
+          From skill to income — simple, fast, and reliable.
+        </h3>
+      </div>
+
+      <div class="operations">
+        <div class="operations__tab-container">
+          <button
+            class="btn operations__tab operations__tab--1 operations__tab--active"
+            data-tab="1"
+          >
+            <span>01</span>Create Your Profile
+          </button>
+          <button class="btn operations__tab operations__tab--2" data-tab="2">
+            <span>02</span>Get Matched
+          </button>
+          <button class="btn operations__tab operations__tab--3" data-tab="3">
+            <span>03</span>Work & Earn
+          </button>
+        </div>
+
+        <!-- TAB 1 -->
+        <div
+          class="operations__content operations__content--1 operations__content--active"
+        >
+          <div class="operations__icon operations__icon--1">
+            <i class="ri-user-line"></i>
+          </div>
+          <h5 class="operations__header">
+            Create a professional profile that showcases your skills.
+          </h5>
+          <p>
+            Sign up on Hustle OS, add your skills, location, and availability.
+            Whether you're an artisan, electrician, or freelancer, your profile
+            helps clients find you easily.
+          </p>
+        </div>
+
+        <!-- TAB 2 -->
+        <div class="operations__content operations__content--2">
+          <div class="operations__icon operations__icon--2">
+            <i class="ri-seo-line"></i>
+          </div>
+          <h5 class="operations__header">
+            Get matched with clients who need your service.
+          </h5>
+          <p>
+            Clients search for services based on skill and location. Hustle OS
+            connects the right professional to the right job — no stress, no
+            middlemen.
+          </p>
+        </div>
+
+        <!-- TAB 3 -->
+        <div class="operations__content operations__content--3">
+          <div class="operations__icon operations__icon--3">
+            <i class="ri-seo-line"></i>
+          </div>
+          <h5 class="operations__header">
+            Complete jobs, build reputation, and earn more.
+          </h5>
+          <p>
+            Deliver quality work, receive ratings, and grow your credibility.
+            The more you hustle, the more opportunities you unlock on Hustle OS.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="pricing" id="pricing">
+      <div class="section__title">
+        <h2>Pricing</h2>
+        <p>Simple, transparent plans for everyone</p>
+      </div>
+
+      <div class="pricing__grid">
+        <!-- Free Plan -->
+        <div class="pricing__card">
+          <h3>Free</h3>
+          <p class="price">₵0</p>
+          <ul>
+            <li>Create a profile</li>
+            <li>Browse jobs</li>
+            <li>Limited applications</li>
+          </ul>
+          <button class="btn outline">Get Started</button>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="pricing__card featured">
+          <h3>Hustler Pro</h3>
+          <p class="price">Coming Soon</p>
+          <ul>
+            <li>Verified badge</li>
+            <li>Unlimited applications</li>
+            <li>Priority visibility</li>
+          </ul>
+          <button class="btn primary">Join Waitlist</button>
+        </div>
+
+        <!-- Business Plan -->
+        <div class="pricing__card">
+          <h3>Business</h3>
+          <p class="price">Custom</p>
+          <ul>
+            <li>Post unlimited jobs</li>
+            <li>Top talent access</li>
+            <li>Advanced filters</li>
+          </ul>
+          <button class="btn outline">Contact Us</button>
+        </div>
+      </div>
+
+      <p class="pricing__note">
+        *Pricing will be finalized at launch. Early users get special benefits.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Brand -->
+        <div class="footer__brand">
+          <h3>Hustle OS</h3>
+          <p>Connecting skills to real opportunities.</p>
+          <p>Accra, Ghana</p>
+          <!-- <p>hello@hustleos.</p> -->
+
+          <div class="footer__socials">
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+          </div>
+        </div>
+
+        <!-- Product -->
+        <div class="footer__links">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Find Skilled Workers</a></li>
+            <li><a href="#">Post a Job</a></li>
+            <li><a href="#">Verified Profiles</a></li>
+            <li><a href="#">Secure Payments</a></li>
+            <li><a href="#">Ratings & Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer__links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Guides</a></li>
+            <li><a href="#">Features</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>Terms of use | Privacy policy</p>
+        <p>© 2025 — Hustle OS</p>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/frontend/main.js"></script>
+  </body>
+</html>

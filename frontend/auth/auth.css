@@ -1,0 +1,165 @@
+:root {
+  --primary-color: #5ec576;
+  --primary-color-dark: #095d1d;
+  --text-dark: #333;
+  --text-light: #6b7280;
+  --bg-light: #f9fafb;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-light);
+}
+
+.auth__container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.single {
+  grid-template-columns: 1fr;
+}
+
+/* FORM */
+.auth__form {
+  background: var(--white);
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+}
+
+.auth__form h2 {
+  font-size: 2rem;
+}
+
+.auth__form p {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.google__btn {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.google__btn i {
+  margin-right: 8px;
+}
+
+.auth__divider {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: var(--text-light);
+}
+
+.auth__group {
+  margin-bottom: 1rem;
+}
+
+.auth__group input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.auth__btn {
+  margin-top: 1rem;
+  padding: 0.9rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.auth__btn:hover {
+  background: var(--primary-color-dark);
+}
+
+.auth__footer {
+  margin-top: 1.5rem;
+}
+
+.auth__footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* INFO */
+.auth__info {
+  background: rgba(94, 197, 118, 0.08);
+  padding: 4rem;
+}
+
+.auth__info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.auth__info li {
+  margin-bottom: 1rem;
+}
+
+.auth__info i {
+  color: var(--primary-color);
+  margin-right: 8px;
+}
+
+/* ROLE SELECT */
+.role__options {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.role__card {
+  border: 1px solid #ddd;
+  padding: 2rem;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 220px;
+}
+
+.role__card i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.role__card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .auth__container {
+    grid-template-columns: 1fr;
+  }
+
+  .auth__info {
+    display: none;
+  }
+
+  .role__options {
+    flex-direction: column;
+  }
+}

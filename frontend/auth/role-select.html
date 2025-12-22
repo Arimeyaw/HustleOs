@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Select Role | HustleOS</title>
+    <link rel="stylesheet" href="./auth.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="auth__container single">
+      <div class="auth__form center">
+        <h2>How will you use HustleOS?</h2>
+        <p>You can switch later</p>
+
+        <div class="role__options">
+          <div class="role__card" onclick="selectRole('client')">
+            <i class="fa-solid fa-user"></i>
+            <h3>Client</h3>
+            <p>I want to hire trusted workers</p>
+          </div>
+
+          <div class="role__card" onclick="selectRole('worker')">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h3>Worker</h3>
+            <p>I offer services and earn money</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function selectRole(role) {
+        const user = JSON.parse(localStorage.getItem("hustleUser"));
+
+        if (!user) {
+          alert("No user found. Please create account.");
+          window.location.href = "./register.html";
+          return;
+        }
+
+        user.role = role;
+        localStorage.setItem("hustleUser", JSON.stringify(user));
+
+        if (user.role === "client") {
+          window.location.href = "../Dashboard/client.html";
+        } else if (user.role === "worker") {
+          window.location.href = "../Dashboard/worker.html";
+        }
+      }
+    </script>
+  </body>
+</html>

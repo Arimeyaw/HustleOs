@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create Account | HustleOS</title>
+  <link rel="stylesheet" href="./auth.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body>
+
+<div class="auth__container">
+
+  <div class="auth__form">
+    <h2>Create your account</h2>
+    <p>Join HustleOS and turn your skills into opportunities</p>
+
+    <button class="google__btn">
+      <i class="fa-brands fa-google"></i>
+      Continue with Google
+    </button>
+
+    <div class="auth__divider">or use form below</div>
+
+    <div class="auth__group">
+      <label>First Name</label>
+      <input type="text" placeholder="John" />
+    </div>
+
+    <div class="auth__group">
+      <label>Last Name</label>
+      <input type="text" placeholder="Doe" />
+    </div>
+
+    <div class="auth__group">
+      <label>Email</label>
+      <input type="email" placeholder="you@email.com" />
+    </div>
+
+    <div class="auth__group">
+      <label>Password</label>
+      <input type="password" />
+    </div>
+
+    <div class="auth__group">
+      <label>Confirm Password</label>
+      <input type="password" />
+    </div>
+
+    <button class="auth__btn" onclick="goToRole()">Create Account</button>
+
+    <div class="auth__footer">
+      Already have an account?
+      <a href="./login.html">Login</a>
+    </div>
+  </div>
+
+  <div class="auth__info">
+    <h3>Why HustleOS?</h3>
+    <ul>
+      <li><i class="fa-solid fa-shield-check"></i> Verified professionals</li>
+      <li><i class="fa-solid fa-briefcase"></i> Real clients & real jobs</li>
+      <li><i class="fa-solid fa-mobile"></i> Mobile-first for Africa</li>
+      <li><i class="fa-solid fa-chart-line"></i> Grow your income faster</li>
+    </ul>
+  </div>
+
+</div>
+
+<script>
+function goToRole() {
+  const firstName = document.querySelector('input[placeholder="John"]').value.trim();
+  const lastName = document.querySelector('input[placeholder="Doe"]').value.trim();
+  const email = document.querySelector('input[type="email"]').value.trim();
+  const password = document.querySelectorAll('input[type="password"]')[0].value;
+  const confirmPassword = document.querySelectorAll('input[type="password"]')[1].value;
+
+  if (!firstName || !lastName || !email || !password || !confirmPassword) {
+    alert("All fields are required");
+    return;
+  }
+
+  if (password.length < 6) {
+    alert("Password must be at least 6 characters");
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match");
+    return;
+  }
+
+  const user = {
+    firstName,
+    lastName,
+    email,
+    password,
+    role: null
+  };
+  
+
+  localStorage.setItem("hustleUser", JSON.stringify(user));
+  window.location.href = "./role-select.html";
+}
+</script>
+
+</body>
+</html>

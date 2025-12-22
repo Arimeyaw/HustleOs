@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hustle OS | Client Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="./dashboard.css"/>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h2>Hustle<span>OS</span></h2>
+    <ul>
+      <li class="active"><i class="ri-dashboard-line"></i> Dashboard</li>
+      <li><i class="ri-search-line"></i> Find Workers</li>
+      <li><i class="ri-calendar-line"></i> Bookings</li>
+      <li><i class="ri-history-line"></i> History</li>
+      <li><i class="ri-user-line"></i> Profile</li>
+      <li><i class="ri-logout-box-line"></i> Logout</li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <h3>Hello, Client 👋</h3>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <h4>Active Jobs</h4>
+        <p>2</p>
+      </div>
+      <div class="card">
+        <h4>Completed Jobs</h4>
+        <p>8</p>
+      </div>
+      <div class="card">
+        <h4>Total Spent</h4>
+        <p>₵3,200</p>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <h3>Current Bookings</h3>
+      <table>
+        <tr>
+          <th>Worker</th>
+          <th>Service</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>John (Plumber)</td>
+          <td>Pipe Fix</td>
+          <td class="active">In Progress</td>
+        </tr>
+      </table>
+    </section>
+  </main>
+
+<script>
+const user = JSON.parse(localStorage.getItem("hustleUser"));
+
+if (!user || user.role !== "client") {
+  window.location.href = "../auth/login.html";
+}
+</script>
+
+<script src="./dashboard.js"></script>
+</body>
+</html>
