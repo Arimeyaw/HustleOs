@@ -1,6 +1,9 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
+const tabsContainer = document.querySelector(".operations__tab-container");
+const tabs = document.querySelectorAll(".operations__tab");
+const tabsContent = document.querySelectorAll(".operations__content");
 
 menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("open");
@@ -12,6 +15,7 @@ navLinks.addEventListener("click", () => {
   navLinks.classList.remove("open");
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
+
 
 const scrollRevealOption = {
   distance: "50px",
@@ -46,10 +50,6 @@ ScrollReveal().reveal(".header__image__card", {
 });
 
 // HOW IT WORKS TABS
-const tabsContainer = document.querySelector('.operations__tab-container');
-const tabs = document.querySelectorAll('.operations__tab');
-const tabsContent = document.querySelectorAll('.operations__content');
-
 tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
 
@@ -71,4 +71,18 @@ tabsContainer.addEventListener('click', function (e) {
   document
     .querySelector(`.operations__content--${clicked.dataset.tab}`)
     .classList.add('operations__content--active');
+});
+
+
+// ==============================
+// SMOOTH SCROLLING
+// ==============================
+document.querySelector(".nav__links").addEventListener("click", function (e) {
+  if (e.target.classList.contains("nav__link")) {
+    e.preventDefault();
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({
+      behavior: "smooth",
+    });
+  }
 });

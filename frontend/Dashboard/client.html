@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HustleOS | Client Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">Hustle<span>OS</span></div>
+
+    <ul class="menu">
+      <li class="active"><i class="ri-dashboard-line"></i> Dashboard</li>
+      <li><i class="ri-inbox-line"></i> Messages</li>
+      <li><i class="ri-briefcase-line"></i> Jobs</li>
+      <li><i class="ri-user-search-line"></i> Find Workers</li>
+      <li><i class="ri-bar-chart-line"></i> Analytics</li>
+      <li><i class="ri-settings-3-line"></i> Settings</li>
+    </ul>
+
+    <div class="logout" id="logout">
+      <i class="ri-logout-box-line"></i> Logout
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="content">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+            <!-- <i class="ri-menu-line" id="menuBtn"></i> -->
+      <div class="welcome">
+        <h3>Hey, Hamza 👋</h3>
+        <p>Welcome back to HustleOS</p>
+      </div>
+
+      <div class="top-actions">
+        <input type="search" placeholder="Search..." />
+        <i class="ri-notification-3-line"></i>
+        <img src="https://i.pravatar.cc/40" class="avatar">
+      </div>
+      
+    </header>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat-card">
+        <p>Active Jobs</p>
+        <h2 id="activeJobs">0</h2>
+      </div>
+      <div class="stat-card">
+        <p>Completed Jobs</p>
+        <h2 id="completedJobs">0</h2>
+      </div>
+      <div class="stat-card">
+        <p>Total Spent</p>
+        <h2>₵<span id="spent">0</span></h2>
+      </div>
+      <div class="stat-card">
+        <p>Workers Hired</p>
+        <h2 id="workers">0</h2>
+      </div>
+    </section>
+
+    <!-- MIDDLE -->
+    <section class="grid">
+
+      <!-- JOB LIST -->
+      <div class="box">
+        <h4>Ongoing Jobs</h4>
+
+        <div class="job">
+          <span>Plumbing Repair</span>
+          <span class="badge active">In Progress</span>
+        </div>
+
+        <div class="job">
+          <span>Electrical Fix</span>
+          <span class="badge pending">Pending</span>
+        </div>
+
+        <div class="job">
+          <span>Painting Work</span>
+          <span class="badge done">Completed</span>
+        </div>
+      </div>
+
+      <!-- CHART -->
+      <div class="box">
+        <h4>Jobs Overview</h4>
+        <canvas id="jobsChart"></canvas>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

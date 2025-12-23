@@ -7,24 +7,28 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/frontend/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Hustle OS | Where Skills Meet Opportunity</title>
   </head>
   <body>
     <nav>
       <div class="nav__header">
         <div class="nav__logo">
-          <a href="#">HustleOS</a>
+          <a href="#">Hustle <span>OS</span></a>
         </div>
         <div class="nav__menu__btn" id="menu-btn">
           <span><i class="ri-menu-line"></i></span>
         </div>
       </div>
       <ul class="nav__links" id="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">How It Works</a></li>
-        <li><a href="#">Pricing</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#why">Why HustleOS</a></li>
+        <li><a href="#section--2">How It Works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
       </ul>
       <div class="nav__btns">
         <button
@@ -91,41 +95,65 @@
           </div>
           <button type="submit">Search</button>
         </form>
-
-        <div class="bar">Copyright © 2025 Hustle OS. All rights reserved.</div>
       </div>
     </header>
     <!-- FEATURES -->
-    <section class="features" id="features">
-      <h2 class="section__title">Why Hustle OS?</h2>
+    <section class="why-hustle" id="why">
+      <div class="why-header">
+        <h2>Why people choose <span>HustleOS</span></h2>
+        <p>Built for real work, real money, and real growth</p>
+      </div>
 
-      <div class="features__grid">
-        <div class="feature__card">
-          <i class="ri-shield-check-line"></i>
-          <h3>Verified Professionals</h3>
-          <p>Trust and safety through identity and skill verification.</p>
+      <div class="why-grid">
+        <div class="why-card">
+          <i class="fa-solid fa-user-check"></i>
+          <h3>Verified Workers</h3>
+          <p>Hire trusted professionals with real profiles and reviews</p>
         </div>
 
-        <div class="feature__card">
-          <i class="ri-briefcase-line"></i>
-          <h3>Real Jobs</h3>
-          <p>Connect with clients who need your exact skill.</p>
+        <div class="why-card">
+          <i class="fa-solid fa-bolt"></i>
+          <h3>Fast Job Matching</h3>
+          <p>Post a job and get connected to workers in minutes</p>
         </div>
 
-        <div class="feature__card">
-          <i class="ri-smartphone-line"></i>
-          <h3>Mobile Friendly</h3>
-          <p>Work and manage jobs easily on your phone.</p>
+        <div class="why-card">
+          <i class="fa-solid fa-lock"></i>
+          <h3>Secure Payments</h3>
+          <p>Your money is protected until the job is completed</p>
         </div>
 
-        <div class="feature__card">
-          <i class="ri-line-chart-line"></i>
-          <h3>Grow Faster</h3>
-          <p>Ratings, reviews, and exposure help you scale.</p>
+        <div class="why-card">
+          <i class="fa-solid fa-headset"></i>
+          <h3>Always Supported</h3>
+          <p>Get help whenever you need it — clients and workers</p>
+        </div>
+
+        <div class="why-card">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Grow Your Income</h3>
+          <p>Workers build reputation, get reviews, and earn more</p>
+        </div>
+
+        <div class="why-card">
+          <i class="fa-solid fa-sliders"></i>
+          <h3>Flexible Roles</h3>
+          <p>Be a client today and a worker tomorrow — one account</p>
+        </div>
+
+        <div class="why-card">
+          <i class="fa-solid fa-clock"></i>
+          <h3>Quick Setup</h3>
+          <p>Create an account and start hustling in minutes</p>
+        </div>
+
+        <div class="why-card">
+          <i class="fa-solid fa-star"></i>
+          <h3>Real Reviews</h3>
+          <p>Trust built from completed jobs, not fake ratings</p>
         </div>
       </div>
     </section>
-
     <!-- HOW IT WORKS -->
     <section class="section" id="section--2">
       <div class="section__title">
@@ -282,7 +310,6 @@
             <li><a href="#">How It Works</a></li>
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Support</a></li>
-            <li><a href="#">Guides</a></li>
             <li><a href="#">Features</a></li>
           </ul>
         </div>
@@ -294,6 +321,6 @@
       </div>
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="/frontend/main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

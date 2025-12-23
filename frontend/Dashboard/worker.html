@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HustleOS | Worker Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">Hustle<span>OS</span></div>
+
+    <ul class="menu">
+      <li class="active"><i class="ri-dashboard-line"></i> Dashboard</li>
+      <li><i class="ri-briefcase-line"></i> My Jobs</li>
+      <li><i class="ri-search-line"></i> Find Jobs</li>
+      <li><i class="ri-wallet-line"></i> Earnings</li>
+      <li><i class="ri-star-line"></i> Reviews</li>
+      <li><i class="ri-settings-3-line"></i> Settings</li>
+    </ul>
+
+    <div class="logout" id="logout">
+      <i class="ri-logout-box-line"></i> Logout
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="content">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="welcome">
+        <h3>Hey, Electrician 👋</h3>
+        <p>Here’s your hustle overview</p>
+      </div>
+
+      <div class="top-actions">
+        <input type="search" placeholder="Search jobs..." />
+        <i class="ri-notification-3-line"></i>
+        <img src="https://i.pravatar.cc/40" class="avatar">
+      </div>
+    </header>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat-card">
+        <p>Available Jobs</p>
+        <h2 id="availableJobs">0</h2>
+      </div>
+
+      <div class="stat-card">
+        <p>Active Jobs</p>
+        <h2 id="activeJobs">0</h2>
+      </div>
+
+      <div class="stat-card">
+        <p>Total Earnings</p>
+        <h2>₵<span id="earnings">0</span></h2>
+      </div>
+
+      <div class="stat-card">
+        <p>Rating</p>
+        <h2>⭐ <span id="rating">0</span></h2>
+      </div>
+    </section>
+
+    <!-- MIDDLE -->
+    <section class="grid">
+
+      <!-- JOB LIST -->
+      <div class="box">
+        <h4>Current Jobs</h4>
+
+        <div class="job">
+          <span>House Wiring</span>
+          <span class="badge active">Accepted</span>
+        </div>
+
+        <div class="job">
+          <span>Socket Installation</span>
+          <span class="badge pending">Pending</span>
+        </div>
+
+        <div class="job">
+          <span>Generator Repair</span>
+          <span class="badge done">Completed</span>
+        </div>
+      </div>
+
+      <!-- CHART -->
+      <div class="box">
+        <h4>Earnings Overview</h4>
+        <canvas id="earningsChart"></canvas>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

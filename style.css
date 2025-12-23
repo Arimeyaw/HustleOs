@@ -15,6 +15,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 img {
   display: flex;
@@ -113,6 +116,15 @@ nav {
 
 .nav__btns {
   display: none;
+}
+/* Sticky navbar */
+nav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
 .header__container {
@@ -313,23 +325,61 @@ section {
 }
 
 /* FEATURES */
-.features__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-}
-
-.feature__card {
-  background: white;
-  padding: 2rem;
-  border-radius: 20px;
+.why-hustle {
+  padding: 80px 20px;
+  background: #f8f9fc;
   text-align: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
-.feature__card i {
-  font-size: 2.5rem;
-  color: var(--primary);
+.why-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.why-header h2 span {
+  color: var(--primary-color);
+}
+
+.why-header p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.why-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.why-card {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+}
+
+.why-card i {
+  font-size: 26px; /* change size */
+  color: var(--primary-color);
+}
+
+.why-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.why-card p {
+  font-size: 14px;
+  color: #555;
 }
 
 /* HOW IT WORKS */
@@ -347,12 +397,16 @@ section {
   display: inline-block;
   width: 50px;
   height: 50px;
-  background: var(--primary);
+  background: var(--primary-color);
   color: white;
   border-radius: 50%;
   line-height: 50px;
   font-weight: 700;
   margin-bottom: 1rem;
+}
+
+.operations__tab--1 {
+  background-color:  #d35400;
 }
 
    /* HOW IT WORKS (OPERATIONS) */
@@ -570,16 +624,12 @@ section {
   color: var(--text-light);
 }
 
-@media (min-width: 768px) {
-  .pricing__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
+
 
 /* FOOTER */
 .footer {
   margin-top: 6rem;
-  padding: 4rem 1rem 2rem;
+  padding: 3rem 1rem 2rem;
   background-color: #ffffff;
   border-top: 1px solid #e6e6e6;
 }
@@ -655,6 +705,11 @@ section {
 @media (min-width: 768px) {
   .footer__container {
     grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .pricing__grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
