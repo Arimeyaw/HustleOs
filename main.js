@@ -49,6 +49,34 @@ ScrollReveal().reveal(".header__image__card", {
   delay: 2500,
 });
 
+ScrollReveal().reveal(".features__content", {
+  distance: "40px",
+  origin: "left",
+  duration: 900,
+});
+
+ScrollReveal().reveal(".features__visual", {
+  distance: "40px",
+  origin: "right",
+  duration: 900,
+  delay: 200,
+});
+
+ScrollReveal().reveal(".why-card", {
+  distance: "60px",
+  origin: "bottom",
+  duration: 800,
+  interval: 120,
+  easing: "ease-out",
+  reset: false,
+});
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 10);
+});
+
 // HOW IT WORKS TABS
 tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');

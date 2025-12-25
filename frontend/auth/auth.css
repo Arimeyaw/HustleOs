@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #5ec576;
-  --primary-color-dark: #095d1d;
+  --primary-color: #f3853c;
+  --primary-color-dark: #d35400;
   --text-dark: #333;
   --text-light: #6b7280;
   --bg-light: #f9fafb;
@@ -106,7 +106,7 @@ body {
 
 /* INFO */
 .auth__info {
-  background: rgba(94, 197, 118, 0.08);
+  background: rgba(226, 170, 86, 0.1);
   padding: 4rem;
 }
 

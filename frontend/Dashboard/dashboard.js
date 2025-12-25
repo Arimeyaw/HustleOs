@@ -34,16 +34,18 @@ new Chart(document.getElementById("jobsChart"), {
   type: "bar",
   data: {
     labels: ["Jan", "Feb", "Mar", "Apr", "May"],
-    datasets: [{
-      label: "Jobs",
-      data: [3, 5, 2, 6, 4],
-      backgroundColor: "#5ec576"
-    }]
+    datasets: [
+      {
+        label: "Jobs",
+        data: [3, 5, 2, 6, 4],
+        backgroundColor: "#f3853c",
+      },
+    ],
   },
   options: {
     responsive: true,
-    plugins: { legend: { display: false } }
-  }
+    plugins: { legend: { display: false } },
+  },
 });
 const menuBtn = document.getElementById("menuBtn");
 const sidebar = document.querySelector(".sidebar");

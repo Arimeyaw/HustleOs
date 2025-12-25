@@ -11,39 +11,62 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
+    <link rel="shortcut icon" type="image/png" href="/frontend/assets/logo-h.png" />
+
     <link rel="stylesheet" href="style.css" />
     <title>Hustle OS | Where Skills Meet Opportunity</title>
   </head>
   <body>
-    <nav>
-      <div class="nav__header">
+    <nav class="nav">
+      <div class="nav__header navbar">
         <div class="nav__logo">
-          <a href="#">Hustle <span>OS</span></a>
+          <a href="#">Hustle_<span>OS</span></a>
         </div>
+
         <div class="nav__menu__btn" id="menu-btn">
           <span><i class="ri-menu-line"></i></span>
         </div>
-      </div>
-      <ul class="nav__links" id="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#why">Why HustleOS</a></li>
-        <li><a href="#section--2">How It Works</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-      </ul>
-      <div class="nav__btns">
-        <button
-          class="btn sign__up"
-          onclick="location.href='/frontend/auth/login.html'"
-        >
-          Log in
-        </button>
 
-        <button
-          class="btn sign__in"
-          onclick="location.href='/frontend/auth/register.html'"
-        >
-          Get Started
-        </button>
+        <ul class="nav__links" id="nav-links">
+          <li><a class="nav__link" href="#">Home</a></li>
+          <li><a class="nav__link" href="#features">Features</a></li>
+          <li><a class="nav__link" href="#why">Why HustleOS</a></li>
+          <li><a class="nav__link" href="#section--2">How It Works</a></li>
+          <li><a class="nav__link" href="#pricing">Pricing</a></li>
+
+          <!-- MOBILE BUTTONS -->
+          <li class="mobile-btns">
+            <button
+              class="btn sign__up"
+              onclick="location.href='/frontend/auth/login.html'"
+            >
+              Log in
+            </button>
+            <button
+              class="btn sign__in"
+              onclick="location.href='/frontend/auth/register.html'"
+            >
+              Get Started
+            </button>
+          </li>
+        </ul>
+
+        <div class="nav__btns">
+          <button
+            class="btn sign__up"
+            onclick="location.href='/frontend/auth/login.html'"
+          >
+            Log in
+          </button>
+
+          <button
+            class="btn sign__in"
+            onclick="location.href='/frontend/auth/register.html'"
+          >
+            Get Started
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -97,7 +120,65 @@
         </form>
       </div>
     </header>
-    <!-- FEATURES -->
+    <!-- FEATURES (NO CARDS) -->
+<section class="features" id="features">
+  <div class="features__container">
+    
+    <!-- LEFT: TEXT -->
+    <div class="features__content">
+      <h2>
+        Built for <span>real work</span>, not guesswork
+      </h2>
+      <p class="features__intro">
+        HustleOS removes stress from finding work and paying workers.
+        Everything is designed for speed, trust, and real income.
+      </p>
+
+      <ul class="features__list">
+        <li>
+          <i class="ri-shield-check-line"></i>
+          <div>
+            <h4>Verified & Trusted</h4>
+            <p>Profiles are tied to real jobs and real reviews.</p>
+          </div>
+        </li>
+
+        <li>
+          <i class="ri-flashlight-line"></i>
+          <div>
+            <h4>Fast Matching</h4>
+            <p>Connect with nearby clients or workers in minutes.</p>
+          </div>
+        </li>
+
+        <li>
+          <i class="ri-wallet-3-line"></i>
+          <div>
+            <h4>Secure Payments</h4>
+            <p>Funds are protected until work is completed.</p>
+          </div>
+        </li>
+
+        <li>
+          <i class="ri-star-smile-line"></i>
+          <div>
+            <h4>Reputation That Pays</h4>
+            <p>Good work builds reviews that unlock higher earnings.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- RIGHT: VISUAL / IMAGE -->
+    <div class="features__visual">
+      <img
+        src="/frontend/assets/dashboard-preview.png"
+        alt="HustleOS dashboard preview"
+      />
+    </div>
+
+  </div>
+</section>
     <section class="why-hustle" id="why">
       <div class="why-header">
         <h2>Why people choose <span>HustleOS</span></h2>
@@ -227,48 +308,69 @@
       </div>
     </section>
     <section class="pricing" id="pricing">
-      <div class="section__title">
-        <h2>Pricing</h2>
-        <p>Simple, transparent plans for everyone</p>
-      </div>
+      <  <div class="section__title">
+    <h2>Simple pricing. No surprises.</h2>
+    <p>Start free. Upgrade only when you’re earning.</p>
+  </div>
 
-      <div class="pricing__grid">
-        <!-- Free Plan -->
-        <div class="pricing__card">
-          <h3>Free</h3>
-          <p class="price">₵0</p>
-          <ul>
-            <li>Create a profile</li>
-            <li>Browse jobs</li>
-            <li>Limited applications</li>
-          </ul>
-          <button class="btn outline">Get Started</button>
-        </div>
+  <div class="pricing__grid">
 
-        <!-- Pro Plan -->
-        <div class="pricing__card featured">
-          <h3>Hustler Pro</h3>
-          <p class="price">Coming Soon</p>
-          <ul>
-            <li>Verified badge</li>
-            <li>Unlimited applications</li>
-            <li>Priority visibility</li>
-          </ul>
-          <button class="btn primary">Join Waitlist</button>
-        </div>
+    <!-- STARTER -->
+    <div class="pricing__card">
+      <h3>Starter</h3>
+      <p class="price">Free</p>
+      <p class="pricing__desc">
+        Perfect for getting started and testing the platform.
+      </p>
 
-        <!-- Business Plan -->
-        <div class="pricing__card">
-          <h3>Business</h3>
-          <p class="price">Custom</p>
-          <ul>
-            <li>Post unlimited jobs</li>
-            <li>Top talent access</li>
-            <li>Advanced filters</li>
-          </ul>
-          <button class="btn outline">Contact Us</button>
-        </div>
-      </div>
+      <ul>
+        <li>✔ Create a profile</li>
+        <li>✔ Browse jobs</li>
+        <li>✔ Apply to limited jobs</li>
+        <li>✔ Basic support</li>
+      </ul>
+
+      <button class="btn outline">Start Free</button>
+    </div>
+
+    <!-- PRO -->
+    <div class="pricing__card featured">
+      <span class="pricing__badge">Most Popular</span>
+      <h3>Hustler Pro</h3>
+      <p class="price">Coming Soon</p>
+      <p class="pricing__desc">
+        For workers who want more visibility and higher income.
+      </p>
+
+      <ul>
+        <li>✔ Verified badge</li>
+        <li>✔ Unlimited job applications</li>
+        <li>✔ Priority matching</li>
+        <li>✔ Higher profile visibility</li>
+      </ul>
+
+      <button class="btn primary">Join Waitlist</button>
+    </div>
+
+    <!-- BUSINESS -->
+    <div class="pricing__card">
+      <h3>Business</h3>
+      <p class="price">Custom</p>
+      <p class="pricing__desc">
+        Built for companies and frequent job posters.
+      </p>
+
+      <ul>
+        <li>✔ Post unlimited jobs</li>
+        <li>✔ Access top-rated workers</li>
+        <li>✔ Advanced filters</li>
+        <li>✔ Dedicated support</li>
+      </ul>
+
+      <button class="btn outline">Contact Us</button>
+    </div>
+
+  </div>
 
       <p class="pricing__note">
         *Pricing will be finalized at launch. Early users get special benefits.
